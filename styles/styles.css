@@ -1,3 +1,46 @@
 .fila-juego{
     height: 25vh;
 }
+
+.columna-juego{
+    border: 1px solid black;
+}
+
+.cuadro{
+    opacity: 0;
+    transition: opacity ease 0.5s;
+    cursor: pointer;
+}
+
+.amarillo{
+    background-color: yellow;
+}
+
+.rojo{
+    background-color: red;
+}
+
+.azul{
+    background-color: blue;
+}
+
+.verde{
+    background-color: green;
+}
+
+.rosa{
+    background-color: pink;
+}
+
+.naranja{
+    background-color: orange;
+}
+
+.completo{
+    background-color: darkgrey;
+}
+
+.mensaje{
+    display: none;
+}
+
