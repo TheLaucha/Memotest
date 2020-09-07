@@ -7,7 +7,7 @@ context ("Memotest", () =>{
     });
 
     describe("Juega al memotest", () =>{
-        const NUMERO_CUADROS = 12;
+        const NUMERO_CUADROS = 20;
 
         it("se asegura que haya un tablero con cuadros", () =>{
             cy.get("#tablero").find(".cuadro").should("have.length",NUMERO_CUADROS);
@@ -65,7 +65,7 @@ context ("Memotest", () =>{
                 cy.get("#tablero").should("not.be.visible");
                 const numeroTurnos = NUMERO_CUADROS / 2 + 1; // 1 PORQUE SE TESTEO UNO INCORRECTO
 
-                cy.get(".mensaje").should("be.visible").contains("Tardaste ''7'' turnos en terminar")
+                cy.get(".mensaje").should("be.visible").contains(`VOLVER A EMPEZAR`)
             })
 
         })

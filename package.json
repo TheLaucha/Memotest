@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Memory game",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "sweetalert2": "^9.17.2"
+  },
   "devDependencies": {
     "cypress": "^5.1.0"
   },

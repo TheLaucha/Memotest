@@ -1,21 +1,21 @@
 let turnos = 0;
 const $tablero = document.querySelector("#tablero");
 const $cuadros = document.querySelectorAll(".cuadro");
-const $colores = ["amarillo","rojo","azul","verde","rosa","naranja"]
+const $covers = ["biggie","nas","fifty","snoop","wutang","drake","drdre","dirty","jayz","kanye"]
 var $primerCuadro = null;
 
-function configurarJuego(colores){
-    var $coloresDuplicados = colores.concat(colores);
-    var $coloresAleatorios = $coloresDuplicados.sort(function(){
+function configurarJuego(covers){
+    var $coversDuplicados = covers.concat(covers);
+    var $coversAleatorios = $coversDuplicados.sort(function(){
         return 0.5 - Math.random();
     })
-    configurarCuadros($coloresAleatorios);
+    configurarCuadros($coversAleatorios);
     manejarEvento($tablero);
 }
 
-function configurarCuadros(coloresAleatorios){
-    coloresAleatorios.forEach(function(color,i){
-        $cuadros[i].classList.add(color);
+function configurarCuadros(coversAleatorios){
+    coversAleatorios.forEach(function(cover,i){
+        $cuadros[i].classList.add(cover);
     })
 }
 
@@ -71,6 +71,8 @@ function cuadrosSonIguales($primerCuadro,$segundoCuadro){
 
 function eliminarCuadro(cuadroPorEliminar){
     setTimeout(function(){
+        cuadroPorEliminar.parentElement.style.transform = "scale(1.0)";
+        cuadroPorEliminar.parentElement.style.zIndex = "0";
         cuadroPorEliminar.parentElement.classList.add("completo")
         cuadroPorEliminar.remove();
         evaluarFinDeJuego();
@@ -83,7 +85,11 @@ function evaluarFinDeJuego(){
         $tablero.style.display = "none"
         $mensaje = document.querySelector(".mensaje");
         $mensaje.style.display = "block";
-        $mensaje.innerHTML = "Tardaste '<strong>'" + turnos + "'</strong>' turnos en terminar"
+        Swal.fire(
+            'TERMINASTE!',
+            `Tardaste ${turnos} turnos en completarlo`,
+            'success'
+        )          
     }
 }
 
@@ -99,5 +105,4 @@ function ocultarCuadro($cuadro){
     },700)
 }
 
-
-configurarJuego($colores);
+configurarJuego($covers);
