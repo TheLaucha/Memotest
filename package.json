@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "Memory game",
   "main": "index.js",
-  "dependencies": {
-    "bootstrap": "^4.5.2",
-    "jquery": "^3.5.1"
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^5.1.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
   },
   "repository": {
     "type": "git",

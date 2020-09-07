@@ -88,13 +88,15 @@ function evaluarFinDeJuego(){
 }
 
 function mostrarCuadro($cuadro){
+    $cuadro.style.transform = "rotateY(180deg)";
     $cuadro.style.opacity = 1;
 }
 
 function ocultarCuadro($cuadro){
     setTimeout(function(){
+        $cuadro.style.transform = "rotateY(360deg)";
         $cuadro.style.opacity = 0;
-    },500)
+    },700)
 }
 
 
