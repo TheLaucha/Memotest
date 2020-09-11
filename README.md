@@ -1,6 +1,6 @@
 # Memotest Rapero
 
-## Live Demo[https://thelaucha.github.io/Memotest-rapero/]
+## Live Demo[(https://thelaucha.github.io/Memotest-rapero/)]
 
 •HTML
 •CSS
