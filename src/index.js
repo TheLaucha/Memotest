@@ -85,6 +85,7 @@ function evaluarFinDeJuego(){
         $tablero.style.display = "none"
         $mensaje = document.querySelector(".mensaje");
         $mensaje.style.display = "block";
+        document.querySelector("#mensajeFinal").innerHTML = "PUNTUACION '<span id='turnos'>" + turnos + "</span>'";
         Swal.fire(
             'TERMINASTE!',
             `Tardaste ${turnos} turnos en completarlo`,

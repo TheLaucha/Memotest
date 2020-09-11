@@ -4,15 +4,16 @@
 }
 
 body{
-    font-family: 'Mansalva', cursive;
+    font-family: 'Rammetto One', cursive;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url(../images/background.jpg);
-    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+    background-repeat: repeat;
     background-size: cover;
-    background-color: #d6e0f0;
+    background-color: #173769;
 }
 
 .container{
@@ -29,17 +30,23 @@ body{
     font-size: 2.5em;
     text-align: center;
     padding: 10px;
-    color: #da9c17;
+    color: #ffffff;
     text-shadow: 2px 2px 3px #000;
+    letter-spacing: 3px;
 }
 
 .container p{
     color: rgb(31, 31, 31);
-    font-size: 1.2em;
+    font-size: 1.5em;
+    letter-spacing: 3px;
     text-align: center;
     padding: 10px;
-    color: #da9c17;
+    color: #ffffff;
     text-shadow: 2px 2px 3px #000;
+}
+
+#turnos{
+    color: rgb(69, 207, 51);
 }
 
 #recargar{
@@ -156,6 +163,7 @@ body{
 
 .mensaje{
     display: none;
+    justify-content: center;
 }
 
 
